@@ -56,9 +56,6 @@ Aplikasi ini adalah **Content Management System (CMS)** sederhana berbasis Larav
 7. **Install Filament**
     ```bash
     composer require filament/filament
-```bash
-composer require filament/filament
-```
 
 ### 8. Buat User Admin
 ```bash
