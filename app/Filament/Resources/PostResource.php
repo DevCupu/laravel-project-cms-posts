@@ -36,6 +36,7 @@ class PostResource extends Resource
                 Forms\Components\FileUpload::make('thumbnail')
                     ->label('Thumbnail')
                     ->image()
+                    ->disk('public')
                     ->directory('thumbnails')
                     ->imagePreviewHeight('100')
                     ->imageResizeMode('cover')
@@ -61,14 +62,15 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('category.name')->label('Category'),
-                Tables\Columns\TextColumn::make('slug')->label('Slug'),
-                Tables\Columns\TextColumn::make('created_at')->dateTime()->label('Created At'),
                 Tables\Columns\ImageColumn::make('thumbnail')
-                    ->disk('public') 
+                    ->disk('public')
                     ->label('Thumbnail')
                     ->height(60)
                     ->width(60),
+                Tables\Columns\TextColumn::make('category.name')->label('Category'),
+                Tables\Columns\TextColumn::make('slug')->label('Slug'),
+                Tables\Columns\TextColumn::make('created_at')->dateTime()->label('Created At'),
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
