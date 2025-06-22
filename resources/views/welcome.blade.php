@@ -43,7 +43,7 @@
                     <div class="w-8 h-8 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center">
                         <i data-lucide="newspaper" class="w-5 h-5 text-white"></i>
                     </div>
-                    <h1 class="text-xl font-bold text-gray-900">In-Blog</h1>
+                    <h1 class="text-xl font-bold text-gray-900">innews</h1>
                 </div>
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="{{ url('/') }}" class="text-red-600 font-medium">Beranda</a>
@@ -93,50 +93,49 @@
     </header>
 
  <!-- Hero Section -->
-<section class="relative overflow-hidden text-white py-24 px-6">
-    <!-- Background Image Only -->
+<section class="relative overflow-hidden text-white py-28 px-4 md:px-8 bg-gray-900">
+    <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
         <img
-            src="https://img.freepik.com/free-photo/overhead-shot-road-middle-old-buildings-trees_181624-5065.jpg"
+            src="{{ asset('hero.jpg') }}" {{-- Ganti hero-bg.jpg dengan nama file gambar Anda di folder public --}}
             alt="Berita Indonesia"
-            class="w-full h-full object-cover object-center"
+            class="w-full h-full object-cover object-center opacity-70"
             loading="lazy"
         />
-        <!-- Overlay Gelap Tipis Biar Tulisan Terbaca -->
-        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-black/60"></div>
     </div>
 
     <!-- Content -->
     <div class="relative z-10 max-w-4xl mx-auto text-center">
         <!-- Badge -->
-        <div class="inline-flex items-center px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold tracking-wide mb-6">
+        <div class="inline-flex items-center px-6 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm font-semibold tracking-wide mb-7 shadow-lg">
             <i data-lucide="flag" class="w-4 h-4 mr-2"></i>
             Portal Berita Indonesia Terpercaya
         </div>
 
         <!-- Title -->
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-7 drop-shadow-lg">
             Berita Indonesia
-            <span class="block text-yellow-300">Terkini & Terpercaya</span>
+            <span class="block text-yellow-300 drop-shadow-lg">Terkini &amp; Terpercaya</span>
         </h1>
 
         <!-- Description -->
-        <p class="text-lg md:text-xl leading-relaxed text-white/90 mb-10">
+        <p class="text-lg md:text-2xl leading-relaxed text-white/90 mb-12 max-w-2xl mx-auto">
             Dapatkan informasi terbaru dari seluruh penjuru negeri. Kami hadirkan berita politik, ekonomi, budaya, dan olahraga secara cepat, akurat, dan berimbang.
         </p>
 
         <!-- Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
             <a
                 href="{{ url('/posts') }}"
-                class="inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-red-600 bg-white rounded-full shadow hover:bg-gray-100 transition duration-200"
+                class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-gray-900 bg-white rounded-full shadow-lg hover:bg-yellow-100 hover:text-red-800 transition"
             >
                 Baca Berita Terkini
                 <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
             </a>
             <a
                 href="{{ url('/about') }}"
-                class="inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-white border-2 border-white rounded-full hover:bg-white hover:text-red-600 transition duration-200"
+                class="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white border-2 border-white rounded-full hover:bg-white hover:text-gray-900 transition"
             >
                 Tentang Kami
             </a>

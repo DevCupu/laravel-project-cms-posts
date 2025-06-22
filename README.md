@@ -1,6 +1,7 @@
-# Laravel CMS Posts dengan Filament
+# Laravel CMS Posts dengan Filament (60%)
+![Logo](./public/ss-project-latihan.png)
 
-Aplikasi ini adalah **Content Management System (CMS)** sederhana berbasis Laravel yang memanfaatkan **[Filament Admin](https://filamentphp.com/)** untuk mengelola artikel. Fitur utamanya meliputi pembuatan, pengeditan, dan penghapusan konten secara efisien melalui panel admin yang modern dan responsif.
+Aplikasi ini adalah **Content Management System (CMS) In-Blog** sederhana berbasis Laravel yang memanfaatkan **[Filament Admin](https://filamentphp.com/)** untuk mengelola artikel. Fitur utamanya meliputi pembuatan, pengeditan, dan penghapusan konten secara efisien melalui panel admin yang modern dan responsif.
 
 ---
 
